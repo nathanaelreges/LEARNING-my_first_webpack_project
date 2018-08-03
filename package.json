@@ -1,11 +1,11 @@
 {
-  "name": "3-myprj",
+  "name": "webpack_boilerplate",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "dev": "webpack-dev-server --config ./config/webpack.dev.config.js",
+    "prod": "webpack --config ./config/webpack.prod.config.js"
   },
   "keywords": [],
   "author": "",
