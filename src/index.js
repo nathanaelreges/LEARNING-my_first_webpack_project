@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import _join from 'lodash/join'
 import './styles.css'
 
 function component() {
@@ -6,7 +6,7 @@ function component() {
    element.className = 'styled'
 
    // Lodash, now imported by this script
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ')
+   element.innerHTML = _join(['Hello', 'webpack'], ' ')
 
    return element
 }
