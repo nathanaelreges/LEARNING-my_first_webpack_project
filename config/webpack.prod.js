@@ -1,14 +1,11 @@
-const path = require('path');
+const merge = require('webpack-merge')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 
-module.exports = {
-   entry: './src/index.js',
-   output: {
-      filename: 'main.js',
-      path: path.resolve(__dirname, '../dist')
-   },
+const common = require('./webpack.common')
+
+module.exports = merge(common, {
    mode: 'production',
    optimization: {
       minimizer: [
@@ -33,4 +30,4 @@ module.exports = {
          ]
       }]
    }
-};
+})
