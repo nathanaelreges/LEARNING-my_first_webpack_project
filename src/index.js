@@ -1,6 +1,6 @@
 import _join from 'lodash/join'
 import './styles.css'
-
+console.log(process.env.NODE_ENV)
 function component() {
    var element = document.createElement('div')
    element.className = 'styled'
