@@ -7,17 +7,13 @@ module.exports = merge(common, {
    mode: 'development',
    plugins: [],
    devtool: 'inline-source-map',
-   devServer: {
-      contentBase: path.join(__dirname, '/.././dist'),
-      hot: true
-   },
    module: {
       rules: [{
          test: /\.css$/,
          loader: 'style-loader!css-loader' 
       }]
    },
-   plugins: [
-      new webpack.HotModuleReplacementPlugin()
-   ]
+   serve:{
+      content: path.join(__dirname, '/.././dist')
+   }
 })
